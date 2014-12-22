@@ -3,7 +3,8 @@ module LastHit
     class << self
       def run(files)
         files.each do |file|
-          `bundle exec rspec #{file}`
+          p "Running file #{file}"
+          p `bundle exec rspec #{file}`
         end
       end
     end
