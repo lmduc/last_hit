@@ -1,6 +1,6 @@
 # LastHit
 
-TODO: Write a gem description
+Help you to run relevant tests
 
 ## Installation
 
@@ -20,7 +20,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+- Run current modified tests
+`bundle exec rake last_hit:modified_tests`
 
 ## Contributing
 
