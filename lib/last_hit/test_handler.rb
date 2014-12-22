@@ -2,7 +2,7 @@ class TestHandler
   class << self
     def run(files)
       files.each do |file|
-        `rspec #{file}`
+        `bundle exec rspec #{file}`
       end
     end
   end
