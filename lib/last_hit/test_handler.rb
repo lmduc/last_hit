@@ -12,7 +12,8 @@ module LastHit
       private
 
       def before_run(file_string)
-        p "Run files: #{file_string}"
+        $stdout.puts "Run files: #{file_string}"
+        $stdout.puts
       end
 
       def command(file_string)
