@@ -2,11 +2,14 @@ module LastHit
   class TestHandler
     class << self
       def run(files)
-        files.each do |file|
-          p "Start to run file #{file}"
-          `bundle exec rspec #{file}`.split("\n").map(&method(:p))
-          3.times { p "" }
-        end
+        exec_command = command(files.join(" "))
+        system(exec_command)
+      end
+
+      private
+
+      def command(file_string)
+        "bundle exec rspec #{file_string}"
       end
     end
   end
