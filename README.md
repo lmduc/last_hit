@@ -20,8 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-- Run current modified tests
-`bundle exec rake last_hit:modified_tests`
+- Run current modified tests (before commiting)
+`bundle exec rake last_hit:current_modified`
+
+- Run all changed tests of a branch from its fork with another branch
+`bundle exec rake last_hit:current_branch`
+
+- How to config LastHit: put these lines into /config/initializers/last_hit.rb
+```ruby
+LastHit::Configure.config do |config|
+  config.test_command = "bundle exec rspec"
+  config.default_base_branch = "development"
+end
+```
 
 ## Contributing
 
