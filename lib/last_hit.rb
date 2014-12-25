@@ -1,4 +1,5 @@
 require "last_hit/version"
+require "last_hit/configure"
 require 'last_hit/railtie' if defined?(Rails::Railtie)
 
 require 'last_hit/rc_adapter/git_adapter'

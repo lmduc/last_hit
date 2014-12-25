@@ -16,7 +16,7 @@ module LastHit
       end
 
       def command(file_string)
-        "bundle exec rspec #{file_string}"
+        "#{Configure.test_command} #{file_string}"
       end
     end
   end
