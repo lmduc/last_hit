@@ -13,7 +13,7 @@ class LastHit
   end
 
   def all_tests(base_branch)
-    files = RcAdapter::GitAdapter.get_current_branch_files(base_branch)
+    files = RcAdapter::GitAdapter.current_branch_files(base_branch)
     process(files)
   end
 

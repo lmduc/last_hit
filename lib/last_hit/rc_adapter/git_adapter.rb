@@ -2,11 +2,11 @@ class LastHit
   module RcAdapter
     class GitAdapter
       class << self
-        def get_modified_files
+        def modified_files
           `git status -z`.split("\x0").map { |line| line.split(" ").last }
         end
 
-        def get_current_branch_files(another_branch)
+        def current_branch_files(another_branch)
           current_sha = current_commit_sha
           ancestor_sha = common_ancestor(current_branch, another_branch)
 
