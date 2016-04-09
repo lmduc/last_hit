@@ -8,6 +8,7 @@ class LastHit
 
         def current_branch_files(base_branch)
           current_sha = current_commit_sha
+          $stdout.puts "Run tests changed between: #{base_branch} -> #{current_branch}"
           ancestor_sha = common_ancestor(current_branch, base_branch)
 
           `git diff --name-only #{current_sha} #{ancestor_sha} -z`.split("\x0")
