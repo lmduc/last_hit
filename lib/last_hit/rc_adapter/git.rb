@@ -1,6 +1,6 @@
 class LastHit
   module RcAdapter
-    class GitAdapter
+    class Git
       class << self
         def modified_files
           `git status -z`.split("\x0").map { |line| line.split(" ").last }

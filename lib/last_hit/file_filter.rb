@@ -1,4 +1,4 @@
-require 'last_hit/file_filter/spec_filter'
+require 'last_hit/file_filter/spec'
 
 class LastHit
   module FileFilter

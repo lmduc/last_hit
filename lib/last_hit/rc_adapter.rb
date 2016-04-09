@@ -1,4 +1,4 @@
-require 'last_hit/rc_adapter/git_adapter'
+require 'last_hit/rc_adapter/git'
 
 class LastHit
   module RcAdapter

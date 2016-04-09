@@ -20,7 +20,7 @@ class LastHit
   private
 
   def process(files)
-    tests = FileFilter::SpecFilter.get_files(files)
+    tests = FileFilter::Spec.filter(files)
     TestHandler.run(tests)
   end
 end
