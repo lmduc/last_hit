@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = LastHit::VERSION
   spec.authors       = ["Duc Le"]
   spec.email         = ["leminhducktvn@gmail.com"]
-  spec.summary       = %q{Help you to run relevant tests}
-  spec.description   = %q{Working with GIT}
-  spec.homepage      = ""
+  spec.summary       = %q{Help you to reduce the time waiting for the test servers by running some relevant tests before pushing}
+  spec.description   = %q{You can run just relevant tests, fix them and pushing to the test servers}
+  spec.homepage      = "https://github.com/lmduc/last_hit"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
