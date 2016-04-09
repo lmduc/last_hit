@@ -6,6 +6,8 @@ require 'last_hit/file_filter'
 
 require 'last_hit/test_handler'
 
+require 'last_hit/cli'
+
 class LastHit
   def modified_tests
     files = RcAdapter::Git.modified_files
