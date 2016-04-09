@@ -1,5 +1,5 @@
 class LastHit
-  def self.config
+  def self.configure
     yield(Configure) if block_given?
   end
 
