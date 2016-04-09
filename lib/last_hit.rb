@@ -6,23 +6,21 @@ require 'last_hit/file_filter'
 
 require 'last_hit/test_handler'
 
-module LastHit
-  class << self
-    def run_modified_tests
-      files = RcAdapter::GitAdapter.get_modified_files
-      process(files)
-    end
+class LastHit
+  def modified_tests
+    files = RcAdapter::GitAdapter.modified_files
+    process(files)
+  end
 
-    def run_current_branch_tests(another_branch)
-      files = RcAdapter::GitAdapter.get_current_branch_files(another_branch)
-      process(files)
-    end
+  def all_tests(base_branch)
+    files = RcAdapter::GitAdapter.get_current_branch_files(base_branch)
+    process(files)
+  end
 
-    private
+  private
 
-    def process(files)
-      tests = FileFilter::SpecFilter.get_files(files)
-      TestHandler.run(tests)
-    end
+  def process(files)
+    tests = FileFilter::SpecFilter.get_files(files)
+    TestHandler.run(tests)
   end
 end
