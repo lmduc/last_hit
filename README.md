@@ -40,12 +40,26 @@ end
 
 ```ruby
 last_hit modified_tests
+
+#=> Run files: spec/file_filter/spec_spec.rb
+
+#=> .
+
+#=> Finished in 0.00105 seconds (files took 0.04047 seconds to load)
+#=> 1 examples, 0 failures
 ```
 
 #### Run all modified tests of your current branch compared to the base branch
 
 ```ruby
 last_hit all_tests -b develop
+
+#=> Run files: spec/file_filter/spec_spec.rb spec/rc_adapter/git_spec.rb
+
+#=> ...
+
+#=> Finished in 0.00305 seconds (files took 0.14047 seconds to load)
+#=> 3 examples, 0 failures
 ```
 
 `develop` is your base branch
