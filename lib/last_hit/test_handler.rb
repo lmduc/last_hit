@@ -1,4 +1,4 @@
-module LastHit
+class LastHit
   class TestHandler
     class << self
       def run(files)

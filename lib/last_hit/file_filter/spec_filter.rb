@@ -1,4 +1,4 @@
-module LastHit
+class LastHit
   module FileFilter
     class SpecFilter
       SPEC_REGEX = /\A.+_spec.rb\z/

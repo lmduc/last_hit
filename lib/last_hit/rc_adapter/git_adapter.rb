@@ -1,4 +1,4 @@
-module LastHit
+class LastHit
   module RcAdapter
     class GitAdapter
       class << self

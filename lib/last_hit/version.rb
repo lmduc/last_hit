@@ -1,3 +1,3 @@
-module LastHit
-  VERSION = "0.0.15"
+class LastHit
+  VERSION = "0.1.0"
 end
