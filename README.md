@@ -1,6 +1,6 @@
 # LastHit
 
-You finish your features, push code to test servers and they fails after centuries wating? This gem will reduce your waiting time by running relevant tests in your current branch.
+You finish your features, push code to test servers and they fails after centuries wating? This gem will reduce your waiting time by running only relevant tests in your current branch before pushing. Then you can fix failed tests right before pushing them to the test server.
 
 ## Installation
 
