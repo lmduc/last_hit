@@ -6,9 +6,9 @@ class LastHit
           `git status -z`.split("\x0").map { |line| line.split(" ").last }
         end
 
-        def current_branch_files(another_branch)
+        def current_branch_files(base_branch)
           current_sha = current_commit_sha
-          ancestor_sha = common_ancestor(current_branch, another_branch)
+          ancestor_sha = common_ancestor(current_branch, base_branch)
 
           `git diff --name-only #{current_sha} #{ancestor_sha} -z`.split("\x0")
         end
