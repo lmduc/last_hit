@@ -45,8 +45,10 @@ last_hit modified_tests
 #### Run all modified tests of your current branch compared to the base branch
 
 ```ruby
-last_hit all_tests
+last_hit all_tests -b develop
 ```
+
+`develop` is your base branch
 
 ## Contributing
 
