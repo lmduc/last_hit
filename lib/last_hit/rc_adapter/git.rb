@@ -16,15 +16,29 @@ class LastHit
         private
 
         def current_branch
-          `git rev-parse --abbrev-ref HEAD`
+          # NOTE: We need to remove the last 2 characters of the sha
+          # because they're white line characters
+          # E.g: "master\n" should become to "master"
+
+          `git rev-parse --abbrev-ref HEAD`[0..-2]
         end
 
         def current_commit_sha
-          `git rev-parse --verify HEAD`
+          # NOTE: We need to remove the last 2 characters of the sha
+          # because they're white line characters
+          # E.g: "b0fb765371777c8c8e340bbf32dc9f2e160ca998\n"
+          # should become "b0fb765371777c8c8e340bbf32dc9f2e160ca998"
+
+          `git rev-parse --verify HEAD`[0..-2]
         end
 
         def common_ancestor(branch_1, branch_2)
-          `git merge-base #{branch_1} #{branch_2}`
+          # NOTE: We need to remove the last 2 characters of the sha
+          # because they're white line characters
+          # E.g: "6b90b4e272b717a33cd40687b1914dd87022d3b0\n"
+          # should become "6b90b4e272b717a33cd40687b1914dd87022d3b0"
+
+          `git merge-base #{branch_1} #{branch_2}`[0..-2]
         end
       end
     end
