@@ -47,12 +47,24 @@ Options for command:
 ```ruby
 last_hit all_tests -b develop
 
+#=> Run tests changed between: develop -> feature
 #=> Run files: spec/file_filter/spec_spec.rb spec/rc_adapter/git_spec.rb
 
 #=> ...
 
 #=> Finished in 0.00305 seconds (files took 0.14047 seconds to load)
 #=> 3 examples, 0 failures
+```
+
+#### Print out changed files without tests
+* `-b [base_branch]` specify the base branch, optional.
+* `-C [config_file_path]` specify the file path of the config, optional, default is `~/last_hit.yml`.
+
+```ruby
+last_hit check -b develop
+
+#=> There are some changed files without tests
+#=> lib/last_hit.rb
 ```
 
 ## Contributing
