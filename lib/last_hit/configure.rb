@@ -11,8 +11,8 @@ class LastHit
       attr_accessor :test_command, :base_branch
 
       def set(config)
-        @test_command = config['test_command'] if config['test_command'].present?
-        @base_branch = config['base_branch'] if config['base_branch'].present?
+        @test_command = config['test_command'] if config['test_command']
+        @base_branch = config['base_branch'] if config['base_branch']
       end
     end
   end
