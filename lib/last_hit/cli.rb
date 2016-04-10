@@ -2,6 +2,8 @@ require 'thor'
 require 'yaml'
 
 class LastHit
+  class FileNotFound < StandardError; end
+
   class Cli < Thor
     CONFIG_PATH = '~/last_hit.yml'
 
@@ -9,8 +11,11 @@ class LastHit
 
     class << self
       def load_config(path)
+        fail(FileNotFound, 'Config file not found')
         config = YAML.load_file(File.expand_path(path))
         Configure.set(config)
+      rescue FileNotFound => e
+        $stdout.puts(e.message)
       end
     end
 
