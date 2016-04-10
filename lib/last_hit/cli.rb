@@ -5,7 +5,7 @@ class LastHit
   class FileNotFound < StandardError; end
 
   class Cli < Thor
-    CONFIG_PATH = '~/last_hit.yml'
+    CONFIG_PATH = './last_hit.yml'
 
     include Thor::Actions
 
