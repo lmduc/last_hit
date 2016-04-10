@@ -11,7 +11,7 @@ class LastHit
 
     class << self
       def load_config(path)
-        fail(FileNotFound, 'Config file not found')
+        fail(FileNotFound, 'Config file not found') if File.file?(path)
         config = YAML.load_file(File.expand_path(path))
         Configure.set(config)
       rescue FileNotFound => e
