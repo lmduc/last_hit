@@ -5,7 +5,11 @@ class LastHit
 
       class << self
         def filter(files)
-          files.select { |file| file =~ SPEC_REGEX }
+          files.select { |file| match?(file) }
+        end
+
+        def match?(file)
+          file =~ SPEC_REGEX
         end
       end
     end

@@ -40,5 +40,13 @@ test_command: 'bundle exec rspec'
       Cli.load_config(options[:config])
       LastHit.new.all_tests(options[:base])
     end
+
+    desc 'check', 'Check if any tests missing for modified files'
+    method_option :base, aliases: '-b', desc: 'Base branch for compare', type: :string
+    method_option :config, aliases: '-C', desc: 'Path to the config file', type: :string, default: CONFIG_PATH
+    def check
+      Cli.load_config(options[:config])
+      LastHit.new.check(options[:base])
+    end
   end
 end
