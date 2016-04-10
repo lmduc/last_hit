@@ -55,8 +55,6 @@ last_hit all_tests -b develop
 #=> 3 examples, 0 failures
 ```
 
-`develop` is your base branch
-
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/last_hit/fork )
