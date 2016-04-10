@@ -20,19 +20,7 @@ Or install it yourself as:
 
 ## Config
 
-Create the file `config/initializers/last_hit.rb` and put below code to config the gem:
-
-```ruby
-require 'last_hit'
-
-LastHit.configure do |config|
-  # The command that run the tests
-  config.test_command        = 'spring rspec'
-
-  # The base branch to which your current branch will be compared
-  config.default_base_branch = 'develop'
-end
-```
+Run the command `last_hit init` to generate the config file for the gem. By default, the config file is `~/last_hit.yml`. You can set the path to the config file by attaching `-p [path]` to the command. For more information, please run `last_hit --help`.
 
 ## Usage
 
@@ -50,6 +38,10 @@ last_hit modified_tests
 ```
 
 #### Run all modified tests of your current branch compared to the base branch
+
+Options for command:
+* `-b [base_branch]` specify the base branch, optional.
+* `-C [config_file_path]` specify the file path of the config, optional, default is `~/last_hit.yml`.
 
 ```ruby
 last_hit all_tests -b develop
