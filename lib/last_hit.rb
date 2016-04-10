@@ -19,6 +19,7 @@ class LastHit
     base_branch = Configure.base_branch if base_branch.nil?
     files = RcAdapter::Git.current_branch_files(base_branch)
     process(files)
+    warning(files)
   end
 
   def check(base_branch)

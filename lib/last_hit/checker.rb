@@ -9,6 +9,8 @@ class LastHit
       if results.length > 0
         $stdout.puts 'There are some changed files without tests'
         results.each { |r| $stdout.puts r }
+      else
+        $stdout.puts 'No changed files without tests'
       end
     end
 
