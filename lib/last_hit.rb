@@ -14,7 +14,8 @@ class LastHit
     process(files)
   end
 
-  def all_tests(base_branch = Configure.default_base_branch)
+  def all_tests(base_branch)
+    base_branch = Configure.base_branch if base_branch.blank?
     files = RcAdapter::Git.current_branch_files(base_branch)
     process(files)
   end
