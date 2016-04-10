@@ -8,7 +8,7 @@ class LastHit
     @base_branch = "development"
 
     class << self
-      attr_accessor :test_command, :default_base_branch
+      attr_accessor :test_command, :base_branch
 
       def set(config)
         @test_command = config['test_command'] if config['test_command'].present?
