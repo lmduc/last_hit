@@ -24,7 +24,7 @@ class LastHit
   def check(base_branch)
     base_branch = Configure.base_branch if base_branch.nil?
     files = RcAdapter::Git.current_branch_files(base_branch)
-    check(files)
+    warning(files)
   end
 
   private
@@ -34,7 +34,7 @@ class LastHit
     TestHandler.run(tests)
   end
 
-  def check(files)
+  def warning(files)
     Checker.check(files)
   end
 end
