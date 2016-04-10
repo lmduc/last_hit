@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Config
 
-Run the command `last_hit init` to generate the config file for the gem. By default, the config file is `~/last_hit.yml`. You can set the path to the config file by attaching `-p [path]` to the command. For more information, please run `last_hit --help`.
+Run the command `last_hit init` to generate the config file for the gem. By default, the config file is `./last_hit.yml`. You can set the path to the config file by attaching `-p [path]` to the command. For more information, please run `last_hit --help`.
 
 ## Usage
 
